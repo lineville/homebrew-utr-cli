@@ -1,7 +1,7 @@
 # homebrew-utr-cli
 Homebrew Formula for utr-cli
 
-```shell
+```console
 brew tap lineville/utr-cli
 brew install utr-cli
 ```
