@@ -5,23 +5,23 @@
 class UtrCli < Formula
   desc "A command line interface for the [Universal Tennis Rating](https://www.myutr.com/) system. This tool allows you to quickly lookup Tennis or PickleBall players and view their match history."
   homepage "https://github.com/lineville/utr-cli"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
 
   depends_on "go"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/lineville/utr-cli/releases/download/v0.1.1/utr-cli_Darwin_x86_64.tar.gz"
-      sha256 "2edf2a29608dcc0745b64f5f9afe758cdcb15109a5af37ffe0a2d661dea4c6ba"
+    if Hardware::CPU.arm?
+      url "https://github.com/lineville/utr-cli/releases/download/v0.1.2/utr-cli_Darwin_arm64.tar.gz"
+      sha256 "1fd1a27e7483e67d72ffb02cfcf1ea58c8881df65c63c75f218a7d091cea06cc"
 
       def install
         bin.install "utr-cli"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/lineville/utr-cli/releases/download/v0.1.1/utr-cli_Darwin_arm64.tar.gz"
-      sha256 "2d8eb8afb80878e20f07d23229a467e8d1de79caa01189258dec5ab325b1dcdf"
+    if Hardware::CPU.intel?
+      url "https://github.com/lineville/utr-cli/releases/download/v0.1.2/utr-cli_Darwin_x86_64.tar.gz"
+      sha256 "b3072ee2d12c9f38a0a9beb3db340766c95cf62f6854d076a9898220f8b12be4"
 
       def install
         bin.install "utr-cli"
@@ -31,24 +31,24 @@ class UtrCli < Formula
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/lineville/utr-cli/releases/download/v0.1.1/utr-cli_Linux_armv6.tar.gz"
-      sha256 "a6b5b17b511b205a7212ec692377706be92925f4888677e1ca2fca042b4390a6"
+      url "https://github.com/lineville/utr-cli/releases/download/v0.1.2/utr-cli_Linux_armv6.tar.gz"
+      sha256 "c7a152fd1d5622a4e06228c9d585ec0d5f4efdf5f4c208d0ef2198918fb033ac"
 
       def install
         bin.install "utr-cli"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/lineville/utr-cli/releases/download/v0.1.1/utr-cli_Linux_arm64.tar.gz"
-      sha256 "6d4cb7f91bde7718bdf032b338fcfad10b4df9aa9cdad051964aa3b518c4f516"
+      url "https://github.com/lineville/utr-cli/releases/download/v0.1.2/utr-cli_Linux_arm64.tar.gz"
+      sha256 "3c448418ddca3477d5d60df40435408ec3861fbe66dd90676d87995ec63e1262"
 
       def install
         bin.install "utr-cli"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/lineville/utr-cli/releases/download/v0.1.1/utr-cli_Linux_x86_64.tar.gz"
-      sha256 "52a318fc3157d882974f7a1186cdf033e4b79e17305c3effc899fb328f7e9bcc"
+      url "https://github.com/lineville/utr-cli/releases/download/v0.1.2/utr-cli_Linux_x86_64.tar.gz"
+      sha256 "2e46aaf262cc459e87502d3867e408186fed653f62940df20a07a155ab577605"
 
       def install
         bin.install "utr-cli"
